@@ -17,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/sona9090/minigames/issues"
   },
-  "homepage": "https://github.com/sona9090/minigames#readme"
+  "homepage": "https://github.com/sona9090/minigames#readme",
+  "devDependencies": {
+    "typescript": "^7.0.2",
+    "vite": "^8.3.0"
+  }
 }
