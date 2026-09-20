@@ -1,0 +1,27 @@
+{
+  "name": "minigames",
+  "version": "1.0.0",
+  "description": "MiniGames project for RS School.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sona9090/minigames.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/sona9090/minigames/issues"
+  },
+  "homepage": "https://github.com/sona9090/minigames#readme",
+  "devDependencies": {
+    "typescript": "^7.0.2",
+    "vite": "^8.3.0"
+  }
+}
