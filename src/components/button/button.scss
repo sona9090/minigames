@@ -1,0 +1,41 @@
+@use '../../styles/tokens' as *;
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-on-primary;
+  font-family: $font-family-primary;
+  font-size: $font-size-label-large;
+  font-weight: $font-weight-bold;
+  line-height: 17px;
+  border: 2px solid $color-on-primary;
+  border-radius: $radius-small;
+  white-space: nowrap;
+
+  &--primary {
+    background: $color-primary;
+  }
+
+  &--outlined {
+    background: $color-white;
+  }
+
+  &--medium {
+    padding: $button-medium-padding;
+  }
+
+  &--small {
+    padding: $button-small-padding;
+  }
+}
+
+@media (hover: hover) {
+  .button--outlined:hover {
+    background: $color-surface;
+  }
+
+  .button--primary:hover {
+    background: $color-primary-high;
+  }
+}
