@@ -1,0 +1,12 @@
+#!/bin/sh
+
+commit_msg=$(cat "$1")
+
+if ! echo "$commit_msg" | grep -Eq '^(feat|fix|refactor|docs|style|test|perf|build|ci|chore|revert)(\([a-z0-9._-]+\))?!?: .+'; then
+  echo "Invalid commit message."
+  echo "Use Conventional Commits, for example:"
+  echo "  feat: add hero section"
+  echo "  fix(header): correct mobile layout"
+  echo "  chore: configure husky"
+  exit 1
+fi
