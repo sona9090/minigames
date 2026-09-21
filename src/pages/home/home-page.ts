@@ -1,7 +1,15 @@
-export const createHomePage = (): HTMLElement => {
-  const page = document.createElement('main');
+import { createHeader } from '../../components/header/header';
 
-  page.textContent = 'MiniGames';
+export const createHomePage = (): HTMLElement => {
+  const page = document.createElement('div');
+  page.className = 'home-page';
+
+  const header = createHeader();
+
+  const main = document.createElement('main');
+  main.className = 'home-page__main';
+
+  page.append(header, main);
 
   return page;
 };

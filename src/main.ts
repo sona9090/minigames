@@ -1,3 +1,4 @@
+import './styles/main.scss';
 import { createApp } from './app';
 
 const root = document.querySelector<HTMLDivElement>('#app');
