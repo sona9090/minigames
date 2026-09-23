@@ -25,3 +25,4 @@ MiniGames is a project containing a collection of interactive browser mini-games
 
 ```bash
 git clone https://github.com/sona9090/minigames.git
+```
