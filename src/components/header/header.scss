@@ -24,10 +24,7 @@
     width: $size-4;
     height: $size-4;
     flex-shrink: 0;
-
-    // Temporary until I will add icon from assets.
-    background: url('../assets/images/logo.svg');
-    border: 2px solid $color-on-primary;
+    background: url('../../assets/images/logo.svg') no-repeat center center/contain;
   }
 
   &__brand-name {
@@ -278,7 +275,7 @@
     &__mobile-nav {
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
       width: 100%;
     }
 
@@ -286,8 +283,8 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      align-items: center;
-      padding: $size-2;
+      align-items: flex-start;
+      padding: $size-3 0 0;
       gap: 2px;
       color: $color-on-bg-footer;
       font-size: $font-size-body-large;

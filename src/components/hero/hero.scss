@@ -1,0 +1,138 @@
+@use '../../styles/tokens' as *;
+@use '../../styles/breakpoints' as *;
+
+.hero {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 627px;
+  padding: 112px 120px;
+  background:
+    linear-gradient(rgba(30, 27, 58, 0.65), rgba(30, 27, 58, 0.65)),
+    url('../../assets/images/hero-section.png') center / cover no-repeat;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 640px;
+    min-height: 403px;
+    padding: 48px;
+    gap: $size-3;
+    background: $color-bg;
+    border: 3px solid $color-on-primary;
+    box-shadow: 8px 8px 0 $color-on-primary;
+    border-radius: $radius-extra-large;
+  }
+
+  &__title {
+    margin: 0;
+    color: $color-on-primary;
+    font-family: $font-family-primary;
+    font-size: $font-size-display-large;
+    font-weight: $font-weight-bold;
+    letter-spacing: -1px;
+    line-height: 110%;
+  }
+
+  &__description {
+    margin: 0;
+    color: $color-on-bg;
+    font-family: $font-family-primary;
+    font-size: $font-size-body-large;
+    font-weight: $font-weight-medium;
+    line-height: 150%;
+  }
+
+  &__description-mobile {
+    display: none;
+  }
+
+  &__button {
+    min-width: 181px;
+    min-height: 54px;
+    padding: $button-large-padding;
+    font-size: $font-size-body-large;
+    line-height: 22px;
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .hero {
+    min-height: 383px;
+    padding: 72px 40px;
+
+    &__content {
+      width: 520px;
+      min-height: 239px;
+      padding: $size-3;
+      gap: $size-2;
+      border-width: 2px;
+      box-shadow: 4px 4px 0 $color-on-primary;
+      border-radius: $radius-large;
+    }
+
+    &__title {
+      font-size: $font-size-display-medium;
+      line-height: 120%;
+      max-width: 350px;
+    }
+
+    &__description {
+      font-size: $font-size-body-small;
+      line-height: 140%;
+    }
+
+    &__button {
+      min-width: 149px;
+      min-height: 38px;
+      padding: $button-small-padding;
+      font-size: $font-size-label-large;
+      line-height: 17px;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .hero {
+    min-height: 331px;
+    padding: 64px 16px;
+
+    &__content {
+      width: 100%;
+      min-height: 203px;
+      padding: $size-3;
+      gap: $size-2;
+      border: 2px solid $color-on-primary;
+      box-shadow: 4px 4px 0 $color-on-primary;
+      border-radius: $radius-medium;
+    }
+
+    &__title {
+      font-size: $font-size-display-small;
+      line-height: 120%;
+      max-width: 230px;
+    }
+
+    &__description {
+      font-size: $font-size-label-medium;
+      line-height: 140%;
+    }
+
+    &__description-desktop {
+      display: none;
+    }
+
+    &__description-mobile {
+      display: inline;
+    }
+
+    &__button {
+      min-width: 121px;
+      min-height: 31px;
+      padding: $button-small-padding;
+      font-size: $font-size-label-medium;
+      line-height: 15px;
+    }
+  }
+}
